@@ -24,6 +24,7 @@
 ```JSON
 {
     "atomKeymap.promptV3Features": true,
+    "editor.cursorBlinking": "smooth",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.lineHeight": 22,
@@ -31,9 +32,12 @@
     "editor.fontSize": 14,
     "editor.fontWeight": "400",
     "editor.multiCursorModifier": "ctrlCmd",
+    "editor.mouseWheelZoom": true,
     "editor.quickSuggestions": {
         "other": true
     },
+    "editor.renderLineHighlight": "all",
+    "editor.smoothScrolling": true,
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
@@ -44,7 +48,7 @@
     "files.trimTrailingWhitespace": true,
     "workbench.colorTheme": "Cobalt2",
     "workbench.iconTheme": "vscode-icons",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "workbench.startupEditor": "newUntitledFile",
     "vsicons.dontShowNewVersionMessage": true
 }
