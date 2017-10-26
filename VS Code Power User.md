@@ -18,6 +18,7 @@
 ### Fonts
 
 * [FiraCode](https://github.com/tonsky/FiraCode)
+  * Specific instructions for VS Code can be found here -> [link](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)
 
 ### Settings
 ```JSON
