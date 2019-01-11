@@ -12,14 +12,27 @@ I am always searching for a environment that works with me and not against me. F
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+- [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 - [Editor Config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [GitHub Pull Request](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+- [Gitignore](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore)
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag#user-content-styling-options)
 - [Indenticator](https://marketplace.visualstudio.com/items?itemName=SirTori.indenticator)
+- [Macros](https://marketplace.visualstudio.com/items?itemName=geddski.macros)
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [Markdown Emoji](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)
+- [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
+- [Markdown Table Prettifier](https://marketplace.visualstudio.com/items?itemName=darkriszty.markdown-table-prettify)
+- [Markdown TOC](https://marketplace.visualstudio.com/items?itemName=AlanWalk.markdown-toc)
+- [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath)
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 - [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
 - [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+- [Nunjucks Template](https://marketplace.visualstudio.com/items?itemName=eseom.nunjucks-template)
+- [Output Colorizer](https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer)
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 - [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
@@ -27,6 +40,8 @@ I am always searching for a environment that works with me and not against me. F
 - [Scss Formatter](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 - [Scss IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss)
 - [VS Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+- [VSCode-Faker](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-faker)
+- [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek)
 
 ### Theme
 
@@ -244,22 +259,47 @@ If you just want my settings here they are.
 
 ```JSON
 {
-  "editor.mouseWheelZoom": true,
-  "terminal.external.windowsExec": "C:\\Windows\\System32\\bash.exe",
-  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+  // Theme Setup
+  "workbench.colorTheme": "Cobalt2",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.folders.color": "#ffc600",
+  // Cursor Styles
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "line-thin",
+  // Fonts Setup
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "FIra Code",
   "editor.formatOnSave": true,
   "editor.fontWeight": "100",
   "editor.lineHeight": 22,
   "editor.letterSpacing": 0.5,
   "editor.renderLineHighlight": "all",
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "vue-html": "html",
-    "plaintext": "jade",
-    "cshtml": "cshtml"
-  },
+  // Terminal
+  "terminal.integrated.letterSpacing": 0.5,
+  "terminal.external.windowsExec": "C:\\Windows\\System32\\bash.exe",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+  // ES Lint
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  // Prettier.
+  "prettier.eslintIntegration": true,
+  "prettier.printWidth": 120,
+  // Git
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.settings.mode": "advanced",
+  // UI Improvements
+  "editor.rulers": [80, 100, 120],
+  "breadcrumbs.enabled": false,
+  "extensions.ignoreRecommendations": true,
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.openEditors.visible": 2,
+  "editor.mouseWheelZoom": true,
+  "emmet.triggerExpansionOnTab": true,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -268,17 +308,15 @@ If you just want my settings here they are.
     "**/.DS_Store": true,
     "**/node_modules": true
   },
-  "eslint.autoFixOnSave": true,
-  "workbench.colorTheme": "Cobalt2",
-  "extensions.ignoreRecommendations": true,
-  "extensions.showRecommendationsOnlyOnDemand": true,
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorStyle": "line-thin",
-  "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.folders.theme": "specific",
-  "material-icon-theme.folders.color": "#ffc600",
-  "terminal.integrated.letterSpacing": 0.5,
-  "breadcrumbs.enabled": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "plaintext": "jade",
+    "cshtml": "cshtml"
+  },
+  // 3rd Party Extensions
+  "gulp.autoDetect": "off",
+  "grunt.autoDetect": "off",
   "highlight-matching-tag.highlightSelfClosing": true,
   "highlight-matching-tag.styles": {
     "opening": {
@@ -287,6 +325,7 @@ If you just want my settings here they are.
         "name": "#000"
       }
     }
-  }
+  },
+  "cSpell.userWords": ["Jermbo"]
 }
 ```
